@@ -26,8 +26,5 @@ public class App {
         window.start();
 
         gameEngine.start();
-
-        Timer timer = new Timer(100, e -> window.updateAgentInfo());
-        timer.start();
     }
 }

@@ -19,7 +19,9 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         List<Agent> agents = gameEngine.getAgentsInfo();
         for (Agent agent : agents) {
-            g.fillOval((int)agent.getX(),  (int)agent.getY(), 10, 10); // Draw agent as a small circle
+            g.fillOval((int) (this.getWidth() * agent.getX()), (int) (this.getHeight() * agent.getY()), 5, 5); // Draw agent as a small circle
         }
+        float rps = gameEngine.getRPS();
+        g.drawString("RPS: " + rps, 10, 10);
     }
 }
