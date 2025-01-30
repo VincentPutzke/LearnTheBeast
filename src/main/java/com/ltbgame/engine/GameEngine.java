@@ -1,5 +1,10 @@
 package com.ltbgame.engine;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ltbgame.agents.Agent;
+
 public class GameEngine {
     private boolean running;
     private final int targetFPS = 60;
@@ -39,5 +44,13 @@ public class GameEngine {
 
     private void render() {
         // Render game world
+    }
+
+    public List<Agent> getAgentsInfo() {
+        // Replace with actual logic to get agents' information
+        List<Agent> agents = new ArrayList<>();
+        agents.add(new Agent(200, 100, 3));
+        agents.add(new Agent(300, 50, 2));
+        return agents;
     }
 }

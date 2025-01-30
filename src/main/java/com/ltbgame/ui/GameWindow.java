@@ -1,15 +1,20 @@
 package com.ltbgame.ui;
 
+import com.ltbgame.engine.GameEngine;
+
 import javax.swing.*;
-// import java.awt.*;
+import java.awt.*;
 
 public class GameWindow extends JFrame {
     private final int width;
     private final int height;
+    private final GameEngine gameEngine;
+    private GamePanel gamePanel;
 
-    public GameWindow(int width, int height) {
+    public GameWindow(int width, int height, GameEngine gameEngine) {
         this.width = width;
         this.height = height;
+        this.gameEngine = gameEngine;
         initialize();
     }
 
@@ -19,14 +24,16 @@ public class GameWindow extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
+
+        gamePanel = new GamePanel(gameEngine);
+        add(gamePanel, BorderLayout.CENTER);
     }
 
     public void start() {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        GameWindow window = new GameWindow(800, 600);
-        window.start();
+    public void updateAgentInfo() {
+        gamePanel.repaint();
     }
 }
