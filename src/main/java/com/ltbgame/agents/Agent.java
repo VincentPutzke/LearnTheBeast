@@ -40,13 +40,25 @@ public class Agent {
     }
 
     public double getX() {
-        return x;
+        return this.x;
     }
 
     public double getY() {
-        return y;
+        return this.y;
     }
 
+    public double getSpeed() {
+        return this.speed;
+    }
+    
+    public double getXSpeed() {
+        return this.x_speed;
+    }
+    
+    public double getYSpeed() {
+        return this.y_speed;
+    }
+    
     public void setPosition(double x, double y) {
         this.x = x;
         this.y = y;
