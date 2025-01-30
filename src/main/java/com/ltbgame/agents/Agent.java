@@ -1,3 +1,5 @@
+package com.ltbgame.agents;
+
 public class Agent {
     private float x;
     private float y;

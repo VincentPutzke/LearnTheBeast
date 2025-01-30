@@ -1,3 +1,5 @@
+package com.ltbgame.engine;
+
 public class GameEngine {
     private boolean running;
     private final int targetFPS = 60;
