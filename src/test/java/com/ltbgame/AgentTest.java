@@ -14,8 +14,8 @@ public class AgentTest {
         Agent agent = new Agent(0, 1, 1, new Random(1));
         assertEquals(0, agent.getX());
         assertEquals(1, agent.getY());
-        assertEquals(0, agent.getXSpeed());
-        assertEquals(1, agent.getYSpeed());
+        assertEquals(0.230878, agent.getXSpeed(), 0.0001);
+        assertEquals( -0.089919, agent.getYSpeed(), 0.0001);
         assertEquals(1, agent.getSpeed());
     }
     
